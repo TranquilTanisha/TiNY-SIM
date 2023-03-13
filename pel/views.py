@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from . models import Encode, Decode
 from . forms import EncodeForm, DecodeForm
-#from .utils import hideData, messageToBinary
+from .utils import hideData, messageToBinary
 
 from django.http import HttpResponse
 from django.template.loader import get_template
@@ -19,16 +19,15 @@ def encode(request):
         if form.is_valid():
             encode=form.save(commit=False)
 
-            '''image=form.cleaned_data.get("image")
+            image=form.cleaned_data.get("image")
             message=form.cleaned_data.get("message")
-            encoded_image = hideData(image, message)'''
+            encoded_image = hideData(image, message)
             filename=form.cleaned_data.get("filename")
-            encoded_image = form.cleaned_data.get("image")
+            #encoded_image = form.cleaned_data.get("image")
             encode.image=encoded_image
             encode.save()
 
             '''context={"encode":encode}
-
             template_path="pel/download.html"
             response=HttpResponse(content_type='application/pdf')
             response["Content-Disposition"]="attachment; filename=%s.pdf " % encode.filename
