@@ -49,7 +49,7 @@ def decode(request):
             image=form.cleaned_data.get("image")
             decode.image=image
             txt=decode_text(image)
-            #text="abc"
+            #txt="abc"
             decode.message=txt
             decode.save()
             return render(request, "pel/result-decode.html", {"decode":decode})
