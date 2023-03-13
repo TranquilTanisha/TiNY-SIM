@@ -13,7 +13,7 @@ class Encode(models.Model):
         return self.message
     
 class Decode(models.Model):
-    #id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     image = models.ImageField(upload_to='images/')
     message = models.TextField()
 
