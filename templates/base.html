@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@600;700;800;900;1000&family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'styles/base.css' %}"
+      rel="stylesheet"
+    />
+    <script src="{% static 'js/test.js' %}"></script>
+    <title>TiNY Sim</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><img class="tiny" src="{% static 'images/tiny.png' %}" alt="TiNY"></div>
+      <div class="navelementcontainer">
+        <ul>
+          <li class="navelements" align="center">
+            <a class="ref" href="">Home</a>
+          </li>
+          <li class="navelements" align="center">
+            <a class="ref" href="">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="mainbody">
+        {% block content %}
+        {% endblock %}
+    </div>
+  </body>
+</html>

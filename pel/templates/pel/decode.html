@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<html lang="en">
+  <body>
+    <head>
+      <link
+        href="{% static 'styles/decode.css' %}"
+        rel="stylesheet"
+      />    
+    <div class="mainbody">
+        <div class="decode-card">
+          <!-- <div class="uploadedimgcontainer"><img id="uploadedimg" src="{{ field.image.url }}"></div> -->
+            <div class="form-card">
+                <form class="form-parent" method="POST" enctype="multipart/form-data">
+                    <div class="form">
+                    {% csrf_token %}
+                    {{form}}
+                    </div>
+                    <div class="decode">
+                    <input type="submit" id="submit" value="Decode and Download!">     
+                    </div>           
+                </form>               
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+.encode-card{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: 85vw;
+    height: 50vh;
+    border-radius: 0.5rem;
+    background-color: #323232;
+    box-shadow: 0px 11px 25px 10px rgba(0, 0, 0, 0.35);
+    padding: 1rem;
+}
+
+#uploadedimgcontainer{
+    width: 30%;
+    height: 90%;
+    padding: 0.5rem;
+    /* border: 1px solid red; */
+}
+
+#uploadedimg{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.form-card{
+    color: white;
+    width: 100%;
+    height: 70%;
+    padding: 2rem;
+}
+
+#message{
+    margin: 1rem 0;
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem;
+    background-color: rgb(255, 218, 232);
+    padding: 1rem;
+}
+#submit{
+    background-color: rgb(255, 0, 93);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    line-height: 1rem;
+    padding: 1rem;
+}
+
+/* .form-parent{
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+
+.encode{
+    display: flex;
+    justify-content: center;
+}
+
+#filename{
+    float: right;
+    border-radius: 0.4rem;
+    padding: 0.3rem;
+    background-color: rgb(255, 218, 232);
+}

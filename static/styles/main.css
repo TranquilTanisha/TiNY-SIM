@@ -1,0 +1,33 @@
+.grid{
+    display: flex;
+    flex-direction: row;
+}
+
+.uploadiconcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    border: 1px solid red;
+}
+
+.uploadicon{
+    background: url(images/uploadicon.svg);
+    aspect-ratio: initial;
+    width: 14rem;
+    height: 14rem;
+    border: none;
+}
+
+#uploadedimgcontainer{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid blue;
+    padding: 1rem;
+}
+
+#uploadedimg{
+    aspect-ratio: initial;
+    max-width: 40vw;
+    max-height: 60vh;
+}

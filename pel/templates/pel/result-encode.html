@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h>Encoded image is: </h>
+<img src="{{ image.url }}" height="150" width="200">
+
+<a href="{% url 'download' id %}">Download as jpg</a>
+{% endblock %}

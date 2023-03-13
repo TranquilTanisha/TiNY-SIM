@@ -1,0 +1,128 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin:0rem 0rem;
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 600;
+}
+
+body{
+    background-color: #353535;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+nav{
+    background-color: #323232;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+    border: 2px solid #323232;
+    margin: 0;
+    padding: 0rem;
+    box-shadow: 0px 11px 25px 10px rgba(0, 0, 0, 0.408);
+    /* background-color: rgba(0, 0, 0, 0.281); */
+    /* backdrop-filter: blur(5px); */
+}
+
+.logo{
+    padding: 0.8rem;
+    /* border: 1px solid blue; */
+}
+
+.tiny{
+    aspect-ratio: initial;
+    height: 7vh;
+}
+.navelementcontainer{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 0rem;
+}
+
+.navelements{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.ref{
+    padding: 0.8rem 1.8rem;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    line-height: 9.8vh;
+}
+
+.ref:hover{
+    color: rgb(255, 0, 93);
+    scale: 110%;
+    transition: all 0.2s;
+}
+
+.mainbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    /* border: 2px solid red; */
+    padding: 0 2rem;
+}
+
+.encode-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    width: 85vw;
+    height: 60vh;
+    border-radius: 0.5rem;
+    background-color: #323232;
+    box-shadow: 0px 11px 25px 10px rgba(0, 0, 0, 0.35);
+    padding: 1rem;
+}
+
+.uploadedimgcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 90%;
+    padding: 0.5rem;
+    /* border: 1px solid red; */
+}
+
+#uploadedimg{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.form-card{
+    /* background-color: white; */
+    color: white;
+    width: 48%;
+    height: 70%;
+    padding: 2rem;
+}
+
+#message{
+    margin: 1rem 0;
+    width: 90%;
+    height: 10rem;
+    border-radius: 1rem;
+    background-color: rgb(255, 218, 232);
+    padding: 1rem;
+}
+#submit{
+    float: right;
+
+    background-color: rgb(255, 0, 93);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    line-height: 1rem;
+    padding: 1rem;
+}
