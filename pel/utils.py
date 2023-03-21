@@ -1,21 +1,23 @@
 import cv2
 import numpy as np
+import os
+from huffman import *
 
 def messageToBinary(message):
     if type(message) == str:
         return ''.join([format(ord(i), "08b") for i in message])
     elif type(message) == bytes or type(message) == np.ndarray:
         return [format(i, "08b") for i in message]
-    elif type(message) == int or type(message) == np.uint8:
+    elif type(message) == int or type(message) == np.unit8:
         return format(message, "08b")
     else:
-        raise TypeError("Input type not supported")
+         raise TypeError("Format Not Supported")
     
 def hideData(image, secret_message):
-    n_bytes = image.shape[0] * image.shape[1] * 3 // 8
-    if len(secret_message) > n_bytes:
-        raise ValueError(
-            "Error encountered insufficient bytes, need bigger image or less data !!")
+    # n_bytes = image.shape[0] * image.shape[1] * 3 // 8
+    # if len(secret_message) > n_bytes:
+    #     raise ValueError(
+    #         "Error encountered insufficient bytes, need bigger image or less data !!")
 
     secret_message += "#####"  # you can use any string as the delimeter
 
