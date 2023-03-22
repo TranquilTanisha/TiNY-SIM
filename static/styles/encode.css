@@ -10,18 +10,6 @@
     padding: 3rem;
 }
 
-#uploadedimgcontainer{
-    width: 30%;
-    height: 90%;
-    /* padding: 0.5rem; */
-    /* border: 1px solid red; */
-}
-
-/* #uploadedimg{
-    max-height: 100%;
-    max-width: 100%;
-} */
-
 .form-card{
     color: white;
     width: 90%;
@@ -55,17 +43,21 @@
     transition: all 0.15s;
 }
 
-/* .form-parent{
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .form{
+.form{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-} */
+    /* border: 1px solid red; */
+}
+
+.toprow{
+    /* border: 1px solid blue; */
+}
+
+table{
+    width: 100%;
+}
 
 .encode{
     display: flex;
@@ -83,4 +75,21 @@
 input:hover{
     color: rgb(255, 0, 93);
     transition: all 0.25s ease-in;
+}
+
+#keycontainer{
+    float: left;
+    color: rgb(255, 255, 255);
+}
+
+#key:hover{
+    color: rgb(255, 0, 93);
+}
+
+#key{
+    /* float: right; */
+    color: #828282;
+    border-radius: 0.4rem;
+    padding: 0.3rem;
+    background-color: rgb(255, 218, 232);
 }
