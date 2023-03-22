@@ -30,7 +30,7 @@ class DecodeForm(ModelForm):
         fields = ['key', 'image']
         widgets = {
             'image': forms.FileInput(attrs={'id': 'uploadedimgcontainer'}),
-            #'message': forms.TextInput(attrs={'id': 'message'}),
+            'key': forms.TextInput(attrs={'id': 'key'}),
         }
         labels = {
             "image": "",

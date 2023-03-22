@@ -66,8 +66,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 90vh;
-    /* border: 2px solid red; */
+    border: 2px solid blue;
     padding: 0 2rem;
 }

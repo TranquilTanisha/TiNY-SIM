@@ -1,3 +1,31 @@
+.switch{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem 0;
+}
+
+.enden{
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+    background: none;
+    border: none;
+    /* border-bottom: 1px solid rgb(255, 255, 255); */
+}
+
+.enden:hover{
+    font-size: 1.4rem;
+    color: rgb(255, 0, 93);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    transition: font-size 0.4s, border-bottom 0.2s;
+}
+
+#decode-form{
+    display: none;
+}
+
 .grid{
     display: flex;
     flex-direction: row;
@@ -12,7 +40,8 @@
 }
 
 .uploadicon{
-    background: url(images/uploadicon.svg);
+    /* background: url(uploadicon.svg); */
+    background: none;
     aspect-ratio: initial;
     width: 14rem;
     height: 14rem;
@@ -24,10 +53,21 @@
     height: fit-content;
     border: 1px solid blue;
     padding: 1rem;
+    display: none;
 }
 
 #uploadedimg{
     aspect-ratio: initial;
     max-width: 40vw;
-    max-height: 60vh;
+    max-height: 50vh;
+}
+
+.submitbutton{
+    float: center;
+    background-color: rgb(255, 0, 93);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    line-height: 1rem;
+    padding: 1rem;
 }
