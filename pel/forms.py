@@ -23,6 +23,7 @@ class EncodeForm(ModelForm):
         self.fields['image'].widget.attrs.update({"class": "input", "placeholder": "Add an image"})
         self.fields['message'].widget.attrs.update({"class": "input", "placeholder": "Add a message to be encoded in the image"})
         self.fields['filename'].widget.attrs.update({"class": "input", "placeholder": "New filename"})
+        #self.fields['key'].widget.attrs.update({"class": "input", "disabled": True})
 
 class DecodeForm(ModelForm):
     class Meta:
