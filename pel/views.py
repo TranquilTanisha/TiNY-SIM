@@ -31,20 +31,15 @@ def encode(request):
             
             encode.image = image
             encode.message = message
-            encode.filename=filename
-            uploaded_file_name = image.name #get the name of the imput image
-            key= generate_password() #generate a random password
-            encode.key = key
-            form=EncodeForm(request.POST, request.FILES, instance=encode)
-            encode.save()
-            uploaded_file_name = './static/images/encoded/' + uploaded_file_name #to get the location of imput image
             
-            img = cv2.imread(uploaded_file_name)
-            encoded_image = hideData(img, message)
+            img_bytes = image.file.read()
+            uploaded_array = np.frombuffer(img_bytes, np.uint8)
+            uploaded_file = cv2.imdecode(uploaded_array,cv2.IMREAD_COLOR) #to convert the output of hideData and pseudo-load the image
+            encoded_image = hideData(uploaded_file, message)
             success, encoded_image = cv2.imencode('.png',encoded_image) #to convert the output of hideData and pseudo-load the image
             encode_image_bytes = encoded_image.tobytes() #convert the pseudo-loaded image into bytes 
             # data=encode.image.read() ##Alternative
-
+            
             response=HttpResponse(encode_image_bytes, content_type='application/png')
             response["Content-Disposition"]="attachment; filename=%s.png " % encode.filename
             return response
