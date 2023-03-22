@@ -12,16 +12,24 @@
     />
     <script src="{% static 'js/test.js' %}"></script>
   <body>
-    <div class="mainbody">
-        <div class="half"><a href="{% url 'encode' %}">Encode</a></div>
-        <div class="half"><a href="{% url 'decode' %}">Decode</a></div>
+        <div class="half" align="center">
+          <a class="jump" href="{% url 'encode' %}">
+          <div class="maintext">Encode</div>
+          <div class="subtext">Encode Data Into An Image</div>
+          </a>
+        </div>
+        <div class="half" align="center">
+          <a class="jump" href="{% url 'decode' %}">
+          <div class="maintext">Decode</div>
+          <div class="subtext">Decode Data From An Image</div>
+          </a>
+        </div>
       <!-- <div class="container">
         <ul>
           <li class="enden" align="center"><a class="option" href="{% url 'encode' %}">Encode</a></li>
           <li class="enden" align="center"><a class="option" href="{% url 'encode' %}">Decode</a></li>
         </ul>
       </div> -->
-    </div>
   </body>
 </html>
 

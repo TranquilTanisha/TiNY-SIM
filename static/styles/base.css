@@ -7,7 +7,11 @@
 }
 
 body{
-    background-color: #353535;
+    background: rgb(53,53,53);
+    background: -moz-linear-gradient(0deg, rgba(53,53,53,1) 0%, rgba(53,45,48,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(53,53,53,1) 0%, rgba(53,45,48,1) 100%);
+    background: linear-gradient(0deg, rgba(53,53,53,1) 0%, rgba(53,45,48,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#353535",endColorstr="#352d30",GradientType=1);
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -41,6 +45,7 @@ nav{
     flex-direction: row;
     margin-left: auto;
     margin-right: 0rem;
+    padding: 1rem;
 }
 
 .navelements{
@@ -67,6 +72,6 @@ nav{
     justify-content: center;
     align-items: center;
     height: 90vh;
-    border: 2px solid blue;
-    padding: 0 2rem;
+    /* border: 2px solid blue; */
+    padding: 0;
 }
