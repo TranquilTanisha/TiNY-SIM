@@ -27,7 +27,7 @@ class EncodeForm(ModelForm):
 class DecodeForm(ModelForm):
     class Meta:
         model = Decode
-        fields = ['image']
+        fields = ['key', 'image']
         widgets = {
             'image': forms.FileInput(attrs={'id': 'uploadedimgcontainer'}),
             #'message': forms.TextInput(attrs={'id': 'message'}),
@@ -41,5 +41,5 @@ class DecodeForm(ModelForm):
         super(DecodeForm,self).__init__(*args, **kwargs)
 
         self.fields['image'].widget.attrs.update({"class": "input", "placeholder": "Add an image"})
-        #self.fields['message'].widget.attrs.update({"class": "input", "placeholder": "Add a message to be encoded in the image"})
+        self.fields['key'].widget.attrs.update({"class": "input", "placeholder": "Add a key"})
        

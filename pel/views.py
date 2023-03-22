@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from . models import Encode, Decode
 from . forms import EncodeForm, DecodeForm
 from .utils import hideData, decode_text
+from . password import generate_password
 
 from django.http import HttpResponse
 from django.template.loader import get_template
@@ -30,7 +31,11 @@ def encode(request):
             
             encode.image = image
             encode.message = message
+            encode.filename=filename
             uploaded_file_name = image.name #get the name of the imput image
+            key= generate_password() #generate a random password
+            encode.key = key
+            form=EncodeForm(request.POST, request.FILES, instance=encode)
             encode.save()
             uploaded_file_name = './static/images/encoded/' + uploaded_file_name #to get the location of imput image
             
@@ -59,7 +64,9 @@ def decode(request):
             decode=form.save(commit=False)
 
             image=form.cleaned_data.get("image")
+            key=form.cleaned_data.get("key")
             decode.image=image
+            decode.key=key
             txt=decode_text(image)
             #txt="abc"
             decode.message=txt

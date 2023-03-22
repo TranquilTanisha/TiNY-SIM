@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import os
-from huffman import *
+from . import huffman
 
 def messageToBinary(message):
     if type(message) == str:
