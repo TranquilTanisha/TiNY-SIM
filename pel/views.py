@@ -62,7 +62,12 @@ def decode(request):
             key=form.cleaned_data.get("key")
             decode.image=image
             decode.key=key
-            txt=decode_text(image)
+
+            img_bytes = image.file.read()
+            uploaded_array = np.frombuffer(img_bytes, np.uint8)
+            uploaded_file = cv2.imdecode(uploaded_array,cv2.IMREAD_COLOR)
+
+            txt=decode_text(uploaded_file)
             #txt="abc"
             decode.message=txt
             decode.save()
