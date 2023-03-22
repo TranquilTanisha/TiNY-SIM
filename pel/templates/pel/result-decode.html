@@ -1,8 +1,22 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 
-<img src="{{decode.image.url}}">
-<p>{{decode.message}}</p>
+<html lang="en">
+  <head>
+    <link
+      href="{% static 'styles/result-decode.css' %}"
+      rel="stylesheet"
+    />
+
+<div class="card">
+    <div class="uploadedimgcontainer"><img id="uploadedimg" src="{{decode.image.url}}"></div>
+    <div class="form-card">
+            <label for="key">Message Stored:</label><br>
+            <textarea id="message" rows=8 name="message" readonly>{{decode.message}}</textarea>  
+    </div>
+</div>
 
 {% endblock %}

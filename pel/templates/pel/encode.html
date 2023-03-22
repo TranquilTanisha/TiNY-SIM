@@ -18,11 +18,19 @@
                 <form class="form-parent" method="POST" enctype="multipart/form-data">
                     <div class="form">
                     {% csrf_token %}
-                    {{form.image}}
-                    {{form.filename}}
-                    Key: {{key}}
-                    {{form.message}}
+                    <table>
+                    <tr>
+                    <td class="toprow">{{form.image}}</td>
+                    <td class="toprow" id="keycontainer">
+                      <label>Key:</label>
+                      <input maxlength="10" id="key" value="{{key}}" readonly></input>
+                    </td>
+                    <td class="toprow">{{form.filename}}</td>
+                    </tr>
+                  </table>
                     </div>
+                    {{form.message}}
+                    
                     <div class="encode">
                     <input type="submit" id="submit" value="Encode and Download!">     
                     </div>           
