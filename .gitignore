@@ -1,7 +1,7 @@
 .vscode
-Steganography/__pycache__
-pel/__pycache__
-pel/migrations/__pycache__
+Steganography/__pycache__/
+pel/__pycache__/
+pel/migrations/__pycache__/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
