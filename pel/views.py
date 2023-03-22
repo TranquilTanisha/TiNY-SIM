@@ -1,4 +1,3 @@
-#import required libs and files
 from django.shortcuts import render, redirect
 from . models import Encode, Decode
 from . forms import EncodeForm, DecodeForm
@@ -25,12 +24,16 @@ def encode(request):
         if form.is_valid():
             
             encode=form.save(commit=False)
-            image=form.cleaned_data.get("image") #get the image uploaded by user
-            message=form.cleaned_data.get("message") #get the information to encode
-            filename=form.cleaned_data.get("filename") #get the filename of the output image
+            # image=form.cleaned_data.get("image") #get the image uploaded by user
+            # message=form.cleaned_data.get("message") #get the information to encode
+            # filename=form.cleaned_data.get("filename") #get the filename of the output image
+
+            image=encode.image
+            message=encode.message
+            filename=encode.filename
             
-            encode.image = image
-            encode.message = message
+            # encode.image = image
+            # encode.message = message
             
             img_bytes = image.file.read()
             uploaded_array = np.frombuffer(img_bytes, np.uint8)
@@ -44,7 +47,8 @@ def encode(request):
             response["Content-Disposition"]="attachment; filename=%s.png " % encode.filename
             return response
         
-    contxt={"form":form}
+    key=generate_password()        
+    contxt={"form":form, "key":key}
     return render(request, "pel/encode.html", contxt)
 
 def download(request, pk):
@@ -53,15 +57,20 @@ def download(request, pk):
 
 def decode(request):
     form=DecodeForm()
+
     if request.method=="POST":
         form=DecodeForm(request.POST, request.FILES)
+
         if form.is_valid():
             decode=form.save(commit=False)
 
-            image=form.cleaned_data.get("image")
-            key=form.cleaned_data.get("key")
-            decode.image=image
-            decode.key=key
+            # image=form.cleaned_data.get("image")
+            # key=form.cleaned_data.get("key")
+            # decode.image=image
+            # decode.key=key
+
+            image=decode.image
+            key=decode.key
 
             img_bytes = image.file.read()
             uploaded_array = np.frombuffer(img_bytes, np.uint8)
