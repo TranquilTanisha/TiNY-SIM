@@ -2,6 +2,8 @@ Steganography/__pycache__/
 pel/__pycache__/
 pel/migrations/__pycache__/
 
+*.pyc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
