@@ -29,9 +29,9 @@
 .jump:hover .maintext{
     scale: 104%;
     animation: bounce 4s infinite;
-	-webkit-animation: bounce 4s infinite;
-	-moz-animation: bounce 4s infinite;
-	-o-animation: bounce 4s infinite;
+    -webkit-animation: bounce 4s infinite;
+    -moz-animation: bounce 4s infinite;
+    -o-animation: bounce 4s infinite;
     animation-timing-function: ease-in-out;
     transition: all 0.5s;
 }
@@ -46,57 +46,20 @@
 }
 
 @-webkit-keyframes bounce {
-	0%, 100% {-webkit-transform: translateY(0); opacity: 1;}	
-	50% {-webkit-transform: translateY(-10px); opacity: 0.4;}
+    0%, 100% {-webkit-transform: translateY(0); opacity: 1;}
+    50% {-webkit-transform: translateY(-10px); opacity: 0.4;}
 }
  
 @-moz-keyframes bounce {
-	0%, 100% {-moz-transform: translateY(0); opacity: 1;}
-	50% {-moz-transform: translateY(-10px); opacity: 0.4;}
+    0%, 100% {-moz-transform: translateY(0); opacity: 1;}
+    50% {-moz-transform: translateY(-10px); opacity: 0.4;}
 }
  
 @-o-keyframes bounce {
-	0%, 100% {-o-transform: translateY(0); opacity: 1;}
-	50% {-o-transform: translateY(-10px); opacity: 0.4;}
+    0%, 100% {-o-transform: translateY(0); opacity: 1;}
+    50% {-o-transform: translateY(-10px); opacity: 0.4;}
 }
 @keyframes bounce {
-	0%, 100% {transform: translateY(0); opacity: 1;}
-	50% {transform: translateY(-10px); opacity: 0.4;}
+    0%, 100% {transform: translateY(0); opacity: 1;}
+    50% {transform: translateY(-10px); opacity: 0.4;}
 }
-
-
-/* .container{
-    display: flex;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: 0rem;
-    border: 1px solid red;
-}
-
-.enden{
-    display: inline-flex;
-    flex-direction: row;
-    width: fit-content;
-    padding: 3rem;
-    margin: 0;
-    border-bottom: 3px solid rgba(0,0,0,0);
-}
-
-.option{
-    font-size: xx-large;
-    padding: 0.8rem 1.8rem;
-    color: rgb(255, 255, 255);
-    margin: 0;
-
-}
-
-.enden:hover .option{
-    color: rgb(255, 0, 93);
-    scale: 110%;
-    transition: color 0.3s, scale 0.3s;
-}
-
-.enden:hover{
-    border-bottom: 3px solid rgb(255, 255, 255);
-    transition: border-bottom 0.2s;
-} */
