@@ -7,10 +7,115 @@
 <html lang="en">
   <head>
     <link href="{% static 'styles/about.css' %}" rel="stylesheet"/>
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
   </head>
   <body>
+    <div class="contain">
+    <div class="wscreen" id="head">Introducing...</div>
+    <div class="wscreen" id="tinysim">TiNY SIM</div>
+    </div>
+    <div class="about">
+    <h1 class="beheading">Quick Start
+    </h1>
+    <div class="notbeheading">
+    <div class="section" id="tiny">
+        <h1 class="mheading">What is TiNY SIM?</h1>
+        <div class="content">TiNY Steganography based Information Manipulation or TiNY SIM for short
+        is an easy to use tool providing users a way to send messages or data through the means
+         of images in a secure and safe manner.
+       It uses the principles of steganography which is the technique of hiding secret data
+        within a file or in order to avoid detection.
+        </div>
+    </div>
 
+    <div class="section" id="steganography">
+        <h1 class="mheading">What is Steganography?</h1>
+        <div class="content">Steganography is the practice of concealing information within other
+             information in a way that is not apparent to the casual observer. Its goal 
+             is to hide the existence of the information, rather than to hide the 
+             content itself.<br>
+             It can be used to hide information in a variety of media, including images,
+             audio files, and text documents. The most common method involves modifying 
+             the least significant bits of a digital file. By altering these bits, it is possible to embed
+             information in the file without significantly changing the appearance or sound of the file.
+        </div>
+    </div>
+
+    <div class="section">
+        <h1 class="mheading">Why do we need such a tool?</h1>
+        <div class="content">In an evergrowing world of technology, privacy and security has become a major
+             concern of many. How private are the messages, videos or images you share over the internet? To
+             tackle this problem, we planned to devise a method which allows a user to send data to another
+             user without revealing any information about the nature of the information shared.
+        </div>
+    </div>
+    </div>
+
+    <h1 class="beheading">Guide
+    </h1>
+
+    <div class="notbeheading">
+        <div class="section" id="tiny">
+            <h1 class="mheading">Homepage</h1>
+            <div class="content">
+                <img class="image" src="{% static 'images/Home.png' %}">
+                <div> The homepage provides the user with 2 options, whether they would like to encode data into an image
+                    or if they would rather retrieve the encoded data from an image (decode).<br><br>
+                    To go to the desired page, just click on the respective side of the page.
+                </div>
+            </div>
+        </div>
+    
+        <div class="section" id="steganography">
+            <h1 class="mheading">Encode</h1>
+            <div class="content">
+                <div> On the encode page, users shall be asked to provide the website with:<br>
+                    &#8729;&nbsp;The image they wish to encode the message into<br>
+                    &#8729;&nbsp;The message itself<br>
+                    &#8729;&nbsp;The new image's filename<br>
+                    Clicking on "Encode And Download" will automatically download the new image with the encoded
+                    message onto the system. The user will also get a Super-Key along with the image which will
+                    be required at the time of decoding.
+
+                </div>
+                <img class="image" src="{% static 'images/Encode.png' %}">
+            </div>
+        </div>
+    
+        <div class="section">
+            <h1 class="mheading">Decode</h1>
+            <div class="content">
+                <img class="image" id="decodeimg" src="{% static 'images/Decode.png' %}">
+                <img class="image" id="decodeimg" src="{% static 'images/DecodeResult.png' %}">
+                <div> On the decode page, users shall be asked to provide the website with:<br>
+                    &#8729;&nbsp;The image they wish to decode the message from<br>
+                    &#8729;&nbsp;The super-key for the corresponding image<br>
+                    Clicking on "Decode" will display the message which was stored
+                    in the image onto the site only if the super-key matches with the image.
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+    <script>
+        var slideRight = {
+        distance: '50%',
+        origin: 'left',
+        opacity: 0
+        };
+        ScrollReveal().reveal('.image', {delay: 1600, duration: 1000});
+        ScrollReveal().reveal('#steganography', {delay: 500});
+        ScrollReveal().reveal('.content', { delay: 100 });
+        ScrollReveal().reveal('.content', { duration: 2500 });
+        ScrollReveal().reveal('.content', slideRight);
+        ScrollReveal().reveal('.mheading', { duration: 2500 });
+		ScrollReveal().reveal('.mheading', slideRight);
+
+	</script>
   </body>
 </html>
 {% endblock %}
