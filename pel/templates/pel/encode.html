@@ -11,7 +11,16 @@
         href="{% static 'styles/encode.css' %}"
         rel="stylesheet"
       />    
+      <!-- <script>
+        function msg(){
+          console.log(document.getElementById('textarea').value);
+          msg = document.getElementById('message');
+          msg.innerHTML = document.getElementById('textarea').value;
+        }
+      </script> -->
+    </head>
     <div class="mainbody">
+      <div id="maintext">Encode</div>
         <div class="encode-card">
           <!-- <div class="uploadedimgcontainer"><img id="uploadedimg" src="{{ field.image.url }}"></div> -->
             <div class="form-card">
@@ -29,15 +38,35 @@
                     </tr>
                   </table>
                     </div>
+                    <!-- <textarea id="textarea" placeholder="Add a message to be encoded into the image"></textarea> -->
                     {{form.message}}
                     
                     <div class="encode">
-                    <input type="submit" id="submit" value="Encode and Download!">     
+                    <button type="submit" id="submit">Encode and Download!</button>   
                     </div>           
                 </form>     
             </div>
         </div>
     </div>
+    <script>
+      var slideup = {
+      distance: '100%',
+      origin: 'bottom',
+      opacity: 0
+      };
+
+      var slideleft = {
+      distance: '50%',
+      origin: 'right',
+      opacity: 0
+      };
+      
+      ScrollReveal().reveal('#maintext', { duration: 2500 });
+      ScrollReveal().reveal('#maintext', slideup);
+      ScrollReveal().reveal('.encode-card', { delay: 300, duration: 2200 });
+      ScrollReveal().reveal('.encode-card', slideleft);
+
+    </script>
   </body>
 </html>
 
