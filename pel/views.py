@@ -17,6 +17,9 @@ import numpy as np
 def home(request):
     return render(request, "pel/home-copy.html")
 
+def about(request):
+    return render(request, "pel/about.html")
+
 #function for encoding the information
 def encode(request):
     form=EncodeForm()

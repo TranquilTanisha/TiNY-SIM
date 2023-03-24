@@ -28,12 +28,13 @@
           <li class="navelements" align="center">
             <a class="ref" href="{% url 'home' %}">Home</a>
           </li>
-          <!-- <li class="navelements" align="center">
-            <a class="ref" href="">About</a>
-          </li> -->
+          <li class="navelements" align="center">
+            <a class="ref" href="{% url 'about' %}">About</a>
+          </li>
         </ul>
       </div>
     </nav>
+    <div class="wasteofspace"></div>
     <div class="mainbody">
         {% block content %}
         {% endblock %}

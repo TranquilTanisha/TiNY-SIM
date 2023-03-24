@@ -1,0 +1,139 @@
+*{
+    color: white;
+}
+
+body {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.mainbody{
+    display: block;
+    width: 100%;
+    height: max-content;
+    /* padding: 4rem; */
+    margin: 0;
+}
+
+/* .contain{
+    overflow-y: scroll;
+    height: 88vh;
+    scroll-snap-type: y mandatory;
+} */
+
+.wscreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 88vh;
+    width: 100%;
+}
+
+#head{
+    font-size: 5rem;
+    font-weight: 800;
+    background: rgb(53,53,53);
+    background: -moz-linear-gradient(0deg, rgba(53,53,53,0) 5%, rgba(255,0,93,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(53,53,53,0) 5%, rgba(255,0,93,1) 100%);
+    background: linear-gradient(0deg, rgba(53,53,53,0) 5%, rgba(255,0,93,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#353535",endColorstr="#ff005d",GradientType=1);
+    animation: bounce 3.5s infinite;
+    -webkit-animation: bounce 3.5s infinite;
+    -moz-animation: bounce 3.5s infinite;
+    -o-animation: bounce 3.5s infinite;
+    animation-timing-function: ease-in-out;
+    /* border: 1px solid red; */
+}
+
+#tinysim{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem;
+    height: 88vh;
+    width: 100%;
+    font-size: 5rem;
+    font-weight: 800;
+    border-bottom: 1px solid grey;
+}
+
+.about{
+    padding: 2rem 4rem;
+}
+
+.beheading{
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+.notbeheading{
+    margin: 1rem 4rem;
+}
+
+.section{
+    margin: 2rem 0;
+    padding: 0 0 2rem 0;
+    border-bottom: 1px solid grey;
+}
+
+.section:hover .mheading{
+    color: rgba(255,0,93,1);
+}
+
+.mheading{
+    margin: 1rem 0;
+    transition: color 0.5s;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: rgb(255, 219, 232);
+}
+
+.image{
+    border-radius: 20px;
+    margin: 0 1.2rem;
+    padding: 0.5rem;
+    border: 1px solid rgb(255, 140, 182);
+    max-width: 30vw;
+    max-height: 30vh;
+}
+
+.content>div{
+    font-size: 1.2rem;
+    color: rgb(255, 219, 232);
+    margin: 0 2rem;
+}
+
+#decodeimg{
+    max-width: 18vw;
+    max-height: 30vh;
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {-webkit-transform: translateY(0);}
+    50% {-webkit-transform: translateY(-5px);}
+}
+ 
+@-moz-keyframes bounce {
+    0%, 100% {-moz-transform: translateY(0);}
+    50% {-moz-transform: translateY(-5px);}
+}
+ 
+@-o-keyframes bounce {
+    0%, 100% {-o-transform: translateY(0);}
+    50% {-o-transform: translateY(-5px);}
+}
+@keyframes bounce {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-5px);}
+}
+
