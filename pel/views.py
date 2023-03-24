@@ -47,7 +47,7 @@ def encode(request):
             encode_image_bytes = encoded_image.tobytes() #convert the pseudo-loaded image into bytes 
             # data=encode.image.read() ##Alternative
 
-            #print(key)
+            print(key)
 
             key=key[3:-1]
             #print(key)
