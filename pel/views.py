@@ -3,7 +3,7 @@ from . models import Encode, Decode
 from . forms import EncodeForm, DecodeForm
 from .utils import hideData, decode_text
 from . password import generate_password
-from django.contrib import messages
+#from django.contrib import messages
 
 from django.http import HttpResponse
 from django.template.loader import get_template
@@ -46,21 +46,17 @@ def encode(request):
             encode_image_bytes = encoded_image.tobytes() #convert the pseudo-loaded image into bytes 
             # data=encode.image.read() ##Alternativ
             
-            key=generate_password()
-            messages.success(request, "Your key is: "+key)
+            #key=generate_password()
+            #messages.success(request, "Your key is: "+key)
             
             response=HttpResponse(encode_image_bytes, content_type='application/png')
             response["Content-Disposition"]="attachment; filename=%s.png " % encode.filename
             return response
         
-    #key=generate_password()        
-    #contxt={"form":form, "key":key}
-    contxt={"form":form}
+    key=generate_password()        
+    contxt={"form":form, "key":key}
+    #contxt={"form":form}
     return render(request, "pel/encode.html", contxt)
-
-def download(request, pk):
-    encode=Encode.objects.get(id=pk)
-    return render(request, "pel/download.html", {"encode":encode})
 
 def decode(request):
     form=DecodeForm()
