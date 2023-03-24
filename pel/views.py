@@ -23,6 +23,7 @@ def about(request):
 #function for encoding the information
 def encode(request):
     form=EncodeForm()
+    context={}
     if request.method=="POST":
         form=EncodeForm(request.POST, request.FILES)
 
@@ -45,17 +46,28 @@ def encode(request):
             success, encoded_image = cv2.imencode('.png',encoded_image) #to convert the output of hideData and pseudo-load the image
             encode_image_bytes = encoded_image.tobytes() #convert the pseudo-loaded image into bytes 
             # data=encode.image.read() ##Alternative
-            # key=generate_password()
-            # messages.success(request, "Your key is: "+key)
+
+            #print(key)
+
+            key=key[3:-1]
+            #print(key)
+            #print(key[0])
+            key=key.split("'")
+            #print(key)
+            k=key[3]
+            for i in range(7,len(key),4):
+                k+=key[i]
+
+            print(k)
+
+            messages.info(request, "Your key is: ")
             
             response=HttpResponse(encode_image_bytes, content_type='application/png')
             response["Content-Disposition"]="attachment; filename=%s.png " % encode.filename
             return response
         
-    #key=generate_password()        
-    #contxt={"form":form, "key":key}
-    contxt={"form":form}
-    return render(request, "pel/encode.html", contxt)
+    context['form']=form
+    return render(request, "pel/encode.html", context)
 
 def download(request, pk):
     encode=Encode.objects.get(id=pk)

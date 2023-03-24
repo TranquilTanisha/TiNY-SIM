@@ -25,7 +25,7 @@ def hideData(image, secret_message):
     binary_secret_msg,huff_tree_head,compressed_length,huffman_codes = huffman.Huffman_Encoding(secret_message)
 
     huffman_codes = str(compressed_length)+str(huffman_codes)
-    print(huffman_codes)
+    #print(huffman_codes)
     data_len = len(binary_secret_msg)
 
     data_index = 0
