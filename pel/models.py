@@ -6,7 +6,7 @@ class Encode(models.Model):
     image = models.ImageField(upload_to='encoded/', default='images/test2.png')
     filename=models.CharField(max_length=100)
     message = models.TextField()
-    key=models.CharField(max_length=10, default=None)
+    key=models.TextField()
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     
     def __str__(self):
@@ -16,7 +16,7 @@ class Decode(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     image = models.ImageField(upload_to='images/')
     message = models.TextField()
-    key=models.CharField(max_length=10, default="")
+    key=models.TextField()
 
     def __str__(self):
         return self.message
