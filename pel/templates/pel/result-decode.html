@@ -10,9 +10,7 @@
       href="{% static 'styles/result-decode.css' %}"
       rel="stylesheet"
     />
-  </head>
-<div class="mainbody">
-<div id="maintext">Decode</div>
+
 <div class="card">
     <div class="uploadedimgcontainer"><img id="uploadedimg" src="{{decode.image.url}}"></div>
     <div class="form-card">
@@ -20,26 +18,5 @@
             <textarea id="message" rows=8 name="message" readonly>{{decode.message}}</textarea>  
     </div>
 </div>
-</div>
-<script>
-  var slideup = {
-  distance: '100%',
-  origin: 'bottom',
-  opacity: 0
-  };
-
-  var slideleft = {
-  distance: '50%',
-  origin: 'right',
-  opacity: 0
-  };
-  
-  ScrollReveal().reveal('#maintext', { duration: 2500 });
-  ScrollReveal().reveal('#maintext', slideup);
-  ScrollReveal().reveal('#uploadedimg', { delay: 1500});
-  ScrollReveal().reveal('.card', { delay: 300, duration: 2200 });
-  ScrollReveal().reveal('.card', slideleft);
-
-</script>
 
 {% endblock %}

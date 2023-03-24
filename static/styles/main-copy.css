@@ -6,7 +6,6 @@
     width: 50%;
     height: 100%;
     font-size: 5rem;
-    border: 1px dotted rgba(255, 0, 98, 0.177);
 }
 
 .jump{
@@ -127,4 +126,3 @@
     0%, 100% {transform: translateY(0); opacity: 1;}
     50% {transform: translateY(-3px); opacity: 0.4;}
 }
->>>>>>> ca40282d48368c1918a1ea3d3e372cea82e114d6

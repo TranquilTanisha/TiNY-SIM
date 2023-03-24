@@ -118,36 +118,22 @@ body::-webkit-scrollbar {
     max-height: 30vh;
 }
 
-.cards{
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-}
-
-.card{
-    text-align: center;
-    width: 30%;
-    margin: 1.5%;
-    background-color: rgb(37, 37, 37);
-    border-radius: 1rem;
-}
-
 @-webkit-keyframes bounce {
     0%, 100% {-webkit-transform: translateY(0);}
-    50% {-webkit-transform: translateY(-10px);}
+    50% {-webkit-transform: translateY(-5px);}
 }
  
 @-moz-keyframes bounce {
     0%, 100% {-moz-transform: translateY(0);}
-    50% {-moz-transform: translateY(-10px);}
+    50% {-moz-transform: translateY(-5px);}
 }
  
 @-o-keyframes bounce {
     0%, 100% {-o-transform: translateY(0);}
-    50% {-o-transform: translateY(-10px);}
+    50% {-o-transform: translateY(-5px);}
 }
 @keyframes bounce {
     0%, 100% {transform: translateY(0);}
-    50% {transform: translateY(-10px);}
+    50% {transform: translateY(-5px);}
 }
 
