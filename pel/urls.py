@@ -3,8 +3,7 @@ from . import views
 
 urlpatterns = [
     path("", views.home, name="home"),
+    path("about/", views.about, name="about"),
     path("encode/", views.encode, name="encode"),
-    path("download/<str:pk>/", views.download, name="download"),
-
     path("decode/", views.decode, name="decode"),
 ]
