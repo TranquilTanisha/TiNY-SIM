@@ -5,7 +5,7 @@ from . models import Encode, Decode
 class EncodeForm(ModelForm):
     class Meta:
         model = Encode
-        fields = ['image', 'filename', 'message']
+        fields = ['image','filename', 'message']
         widgets = {
             'image': forms.FileInput(attrs={'id': 'uploadedimgcontainer'}),
             'message': forms.TextInput(attrs={'id': 'message'}),

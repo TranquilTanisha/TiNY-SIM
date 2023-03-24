@@ -142,7 +142,7 @@ class HuffMan():
             nodes.append(newNode)
         
         huffman_encoding = self.Calculate_Codes(nodes[0])
-        print("symbols with codes", huffman_encoding)
+        # print("symbols with codes", huffman_encoding)
         outLen = self.Total_Gain(data, huffman_encoding)
         encoded_output = self.Output_Encoded(data, huffman_encoding)
         return encoded_output, nodes[0], outLen, huffman_encoding
