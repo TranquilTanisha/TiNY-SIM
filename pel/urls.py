@@ -6,4 +6,4 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("encode/", views.encode, name="encode"),
     path("decode/", views.decode, name="decode"),
-]
+] 
