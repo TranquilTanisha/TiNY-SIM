@@ -9,7 +9,6 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from xhtml2pdf import pisa
 import cv2
-import os
 import numpy as np
 
 # Create your views here.
