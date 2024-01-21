@@ -24,6 +24,7 @@ def about(request):
 #function for encoding the information
 def encode(request):
     form=EncodeForm()
+    context={}
     if request.method=="POST":
         form=EncodeForm(request.POST, request.FILES)
 
@@ -50,10 +51,8 @@ def encode(request):
             
             return render(request, "pel/result-encode.html", {"encode":encode})
         
-    #key=generate_password()        
-    #contxt={"form":form, "key":key}
-    contxt={"form":form}
-    return render(request, "pel/encode.html", contxt)
+    context['form']=form
+    return render(request, "pel/encode.html", context)
 
 def download(request):
     print("hello")

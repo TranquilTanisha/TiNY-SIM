@@ -8,7 +8,7 @@ class Encode(models.Model):
     message = models.TextField()
     key=models.TextField(max_length=1000, default=None)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    
+     
     def __str__(self):
         return self.message
     

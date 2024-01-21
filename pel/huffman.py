@@ -12,7 +12,7 @@ class Node:
 
         # right node
         self.right = right
-
+ 
         # tree direction (0/1)
         self.code = ''
 

@@ -1,35 +1,35 @@
-.mainbody{
-    flex-direction: column;
+.mainbody {
+  flex-direction: column;
 }
 
-.encode-card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80vw;
-    height: max-content;
-    border-radius: 0.5rem;
-    background-color: #323232;
-    box-shadow: 0px 11px 25px 10px rgba(0, 0, 0, 0.35);
-    padding: 2rem 3rem;
+.encode-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: max-content;
+  border-radius: 0.5rem;
+  background-color: #323232;
+  box-shadow: 0px 11px 25px 10px rgba(0, 0, 0, 0.35);
+  padding: 2rem 3rem;
 }
 
-.form-card{
-    color: white;
-    width: 90%;
-    height: 100%;
-    /* padding: 0 2rem; */
+.form-card {
+  color: white;
+  width: 90%;
+  height: 100%;
+  /* padding: 0 2rem; */
 }
 
-#message{
-    margin: 1rem 0;
-    color: #212121;
-    width: 97%;
-    height: 10rem;
-    font-size: 1.1rem;
-    border-radius: 1rem;
-    background-color: rgb(255, 193, 217);
-    padding: 1rem;
+#message {
+  margin: 1rem 0;
+  color: #212121;
+  width: 97%;
+  height: 10rem;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 193, 217);
+  padding: 1rem;
 }
 
 /* #textarea{
@@ -44,68 +44,83 @@
     resize: none;
 } */
 
-#submit{
-    background-color: rgb(255, 0, 93);
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: rgb(226, 226, 226);
-    border-radius: 0.5rem;
-    border: none;
-    line-height: 1rem;
-    padding: 1.5rem 1.2rem;
+#submit {
+  background-color: rgb(255, 0, 93);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgb(226, 226, 226);
+  border-radius: 0.5rem;
+  border: none;
+  line-height: 1rem;
+  padding: 1.5rem 1.2rem;
 }
 
-#submit:hover{
-    color: rgb(255, 255, 255);
-    scale: 103%;
-    font-weight: 800;
-    transition: all 0.15s;
+#submit:hover {
+  color: rgb(255, 255, 255);
+  scale: 103%;
+  font-weight: 800;
+  transition: all 0.15s;
 }
 
-.form{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid red; */
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
 }
 
+<<<<<<< HEAD
+.toprow {
+  /* width: 33%; */
+  /* border: 1px solid blue; */
+}
+=======
 /* .toprow{
     width: 33%;
     border: 1px solid blue;
 } */
+>>>>>>> f4dd7fe86fe0ca69cc5567e612041dc356ebfa69
 
-table{
-    width: 100%;
+table {
+  width: 100%;
 }
 
-.encode{
-    display: flex;
-    justify-content: center;
+.encode {
+  display: flex;
+  justify-content: center;
 }
 
-#filename{
-    float: right;
-    color: #212121;
-    border-radius: 0.4rem;
-    padding: 0.3rem;
-    background-color: rgb(255, 193, 217);
+#filename {
+  float: right;
+  color: #212121;
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+  background-color: rgb(255, 193, 217);
 }
 
-input:hover{
-    color: rgb(255, 0, 93);
-    transition: all 0.25s ease-in;
+input:hover {
+  color: rgb(255, 0, 93);
+  transition: all 0.25s ease-in;
 }
 
-#keycontainer{
-    float: left;
-    color: rgb(255, 255, 255);
+#keycontainer {
+  float: left;
+  color: rgb(255, 255, 255);
 }
 
-#key:hover{
-    color: rgb(255, 0, 93);
+#key:hover {
+  color: rgb(255, 0, 93);
 }
 
+<<<<<<< HEAD
+#key {
+  /* float: right; */
+  color: #828282;
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+  background-color: rgb(255, 193, 217);
+=======
 #key{
     /* float: right; */
     color: rgb(255, 0, 93);
@@ -113,12 +128,13 @@ input:hover{
     border-radius: 0.4rem;
     padding: 0.3rem;
     background-color: rgb(255, 193, 217);
+>>>>>>> f4dd7fe86fe0ca69cc5567e612041dc356ebfa69
 }
 
-#maintext{
-    width: 100%;
-    color: white;
-    /* border: 1px solid red; */
-    font-size: 5rem;
-    font-weight: 800;
+#maintext {
+  width: 100%;
+  color: white;
+  /* border: 1px solid red; */
+  font-size: 5rem;
+  font-weight: 800;
 }
