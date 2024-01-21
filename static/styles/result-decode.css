@@ -59,3 +59,15 @@
     font-size: 5rem;
     font-weight: 800;
 }
+
+.download{
+    background-color: rgb(255, 0, 93);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(226, 226, 226);
+    border-radius: 0.5rem;
+    border: none;
+    line-height: 1rem;
+    padding: 1.5rem 1.2rem;
+    text-decoration: none;
+}

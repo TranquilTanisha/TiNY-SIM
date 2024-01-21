@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<html lang="en">
+  <head>
+    <link href="{% static 'styles/result-decode.css' %}" rel="stylesheet" />
+  </head>
+  <div class="mainbody">
+    <div id="maintext">Encode</div>
+
+    <div class="card">
+        <div class="uploadedimgcontainer">
+          <img id="uploadedimg" src="{{encode.url}}" />
+        </div>
+        <div class="form-card">
+            <label for="key">Key:</label><br />
+            <textarea id="message" rows="8" name="message" readonly>{{encode.key}}</textarea>
+
+            <div class="encode"><a class="download" href="{{encode.url}}" download>Download!</a></div>
+            </div>
+        </div>
+
+  </div>
+  <script>
+    var slideup = {
+      distance: "100%",
+      origin: "bottom",
+      opacity: 0,
+    };
+
+    var slideleft = {
+      distance: "50%",
+      origin: "right",
+      opacity: 0,
+    };
+
+    ScrollReveal().reveal("#maintext", { duration: 2500 });
+    ScrollReveal().reveal("#maintext", slideup);
+    ScrollReveal().reveal("#uploadedimg", { delay: 1500 });
+    ScrollReveal().reveal(".card", { delay: 300, duration: 2200 });
+    ScrollReveal().reveal(".card", slideleft);
+  </script>
+
+  {% endblock %}
+</html>

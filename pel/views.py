@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from xhtml2pdf import pisa
 import cv2
+import numpy as np
 import os
 import numpy as np
 
@@ -28,38 +29,37 @@ def encode(request):
 
         if form.is_valid():            
             encode=form.save(commit=False)
-            # image=form.cleaned_data.get("image") #get the image uploaded by user
-            # message=form.cleaned_data.get("message") #get the information to encode
-            # filename=form.cleaned_data.get("filename") #get the filename of the output image
 
             image=encode.image
             message=encode.message
-            
-            # encode.image = image
-            # encode.message = message
             
             img_bytes = image.file.read()
             uploaded_array = np.frombuffer(img_bytes, np.uint8)
             uploaded_file = cv2.imdecode(uploaded_array,cv2.IMREAD_COLOR) #to convert the output of hideData and pseudo-load the image
             encoded_image,key = hideData(uploaded_file, message)
             success, encoded_image = cv2.imencode('.png',encoded_image) #to convert the output of hideData and pseudo-load the image
-            encode_image_bytes = encoded_image.tobytes() #convert the pseudo-loaded image into bytes 
-            # data=encode.image.read() ##Alternative
-            # key=generate_password()
-            # messages.success(request, "Your key is: "+key)
+            encode_image_bytes = encoded_image.tobytes() #convert the pseudo-loaded image into bytes
             
-            response=HttpResponse(encode_image_bytes, content_type='application/png')
-            response["Content-Disposition"]="attachment; filename=%s.png " % encode.filename
-            return response
+            encode.key = key
+
+            encode.url = '/images/encode-reader/' + encode.filename + '.png'
+
+            filepath = os.path.join('static', 'images', 'encode-reader', encode.filename + '.png')
+            with open(filepath, 'wb') as image_file:
+                image_file.write(encode_image_bytes)
+            
+            return render(request, "pel/result-encode.html", {"encode":encode})
         
     #key=generate_password()        
     #contxt={"form":form, "key":key}
     contxt={"form":form}
     return render(request, "pel/encode.html", contxt)
 
-def download(request, pk):
-    encode=Encode.objects.get(id=pk)
-    return render(request, "pel/download.html", {"encode":encode})
+def download(request):
+    print("hello")
+    response=HttpResponse(request, content_type='application/png')
+    response["Content-Disposition"]="attachment; filename=%s.png " % encode.filename
+    return response
 
 def decode(request):
     form=DecodeForm()
@@ -83,7 +83,6 @@ def decode(request):
             uploaded_file = cv2.imdecode(uploaded_array,cv2.IMREAD_COLOR)
 
             txt=decode_text(uploaded_file,key)
-            #txt="abc"
             decode.message=txt
             decode.save()
             return render(request, "pel/result-decode.html", {"decode":decode})

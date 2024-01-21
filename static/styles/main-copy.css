@@ -53,23 +53,22 @@
 }
 
 @-webkit-keyframes bounce {
-<<<<<<< HEAD
-	0%, 100% {-webkit-transform: translateY(0); opacity: 1; scale: 100%;}	
-	50% {-webkit-transform: translateY(-8px); opacity: 0.5; scale: 95%;}
+	0%, 100% {-webkit-transform: translateY(0); opacity: 0.5; scale: 100%;}	
+	50% {-webkit-transform: translateY(-8px); opacity: 1; scale: 95%;}
 }
  
 @-moz-keyframes bounce {
-	0%, 100% {-moz-transform: translateY(0); opacity: 1; scale: 100%}
-	50% {-moz-transform: translateY(-8px); opacity: 0.5; scale: 95%;}
+	0%, 100% {-moz-transform: translateY(0); opacity: 0.5; scale: 100%}
+	50% {-moz-transform: translateY(-8px); opacity: 1; scale: 95%;}
 }
  
 @-o-keyframes bounce {
-	0%, 100% {-o-transform: translateY(0); opacity: 1; scale: 100%}
-	50% {-o-transform: translateY(-8px); opacity: 0.5; scale: 95%;}
+	0%, 100% {-o-transform: translateY(0); opacity: 0.5; scale: 100%}
+	50% {-o-transform: translateY(-8px); opacity: 1; scale: 95%;}
 }
 @keyframes bounce {
-	0%, 100% {transform: translateY(0); opacity: 1; scale: 100%}
-	50% {transform: translateY(-8px); opacity: 0.5; scale: 95%;}
+	0%, 100% {transform: translateY(0); opacity: 0.5; scale: 100%}
+	50% {transform: translateY(-8px); opacity: 1; scale: 95%;}
 }
 
 
@@ -108,7 +107,7 @@
     border-bottom: 3px solid rgb(255, 255, 255);
     transition: border-bottom 0.2s;
 } */
-=======
+/* =======
     0%, 100% {-webkit-transform: translateY(0); opacity: 1;}
     50% {-webkit-transform: translateY(-3px); opacity: 0.4;}
 }
@@ -125,4 +124,4 @@
 @keyframes bounce {
     0%, 100% {transform: translateY(0); opacity: 1;}
     50% {transform: translateY(-3px); opacity: 0.4;}
-}
+} */
